@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="?attr/actionBarSize"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="appcamp.hemang.calculator.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1.0"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALC"
+            android:id="@+id/button"
+            android:layout_weight="0.5"
+            android:onClick="calc"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:elevation="4dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLR"
+            android:id="@+id/button2"
+            android:layout_weight="0.5"
+            android:onClick="clr"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:weightSum="3.0"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/button3"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button4"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button5"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="3.0"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/button6"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/button7"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/button8"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="3.0"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout5">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/button9"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/button10"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/button11"
+            android:layout_weight="1.0"
+            android:onClick="enterDigit"
+            android:textSize="30dp"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="2.0"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/linearLayout7"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:id="@+id/button12"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ^ "
+            android:id="@+id/button13"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ( "
+            android:id="@+id/button18"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ) "
+            android:id="@+id/button19"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="2.0"
+        android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" + "
+            android:id="@+id/button14"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:id="@+id/button15"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" * "
+            android:id="@+id/button16"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:id="@+id/button17"
+            android:layout_weight="0.5"
+            android:onClick="enterDigit"
+            android:theme="@style/MyButton"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:paddingTop="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:layout_below="@+id/linearLayout5">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+
+            android:id="@+id/button20"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:theme="@style/MyButton"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CRAZY  "
+        android:id="@+id/switch1"
+        android:layout_below="@+id/textView"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingTop="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
